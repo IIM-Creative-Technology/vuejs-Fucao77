@@ -1,8 +1,5 @@
 <template>
-    <h1>Les Différents Blog</h1>
-
-    
-
+    <button>Créer une page</button>
 </template>
 
 
@@ -11,13 +8,12 @@
 
 
 export default {
-    
+    name: CreatePage
+   
 }
 </script>
 
 
 <style>
-   
+
 </style>
-
-
