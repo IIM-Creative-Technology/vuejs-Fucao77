@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Blog from '../views/Blog.vue'
+import BlogAdmin from '../views/BlogAdmin.vue'
+
 
 
 
@@ -8,10 +10,23 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/admin',
+    name: 'BlogAdmin',
+    component: BlogAdmin
+  },
+
+  {
+    path: '/blog',
     name: 'Blog',
     component: Blog
   },
+
+
+  /*{
+    path: '/'
+  }*/
+
+
   {
     path: '/about',
     name: 'About',

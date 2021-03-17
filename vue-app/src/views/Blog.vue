@@ -1,6 +1,6 @@
 <template>
     <h1>Les Différents Blog</h1>
-
+   
     
 
 </template>
@@ -11,6 +11,8 @@
 
 
 export default {
+
+
     
 }
 </script>
