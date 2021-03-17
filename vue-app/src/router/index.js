@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Blog from '../views/Blog.vue'
 import BlogAdmin from '../views/BlogAdmin.vue'
-
+import CreatePage from '../components/CreatePage.vue'
 
 
 
@@ -20,6 +20,8 @@ const routes = [
     name: 'Blog',
     component: Blog
   },
+
+
 
 
   /*{

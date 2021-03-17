@@ -1,7 +1,10 @@
 <template>
-<div>
-   <h1>Zrk c'est lourd</h1>
-   <create-page />
+<div class="content">
+
+
+   <h1>Gestion des article</h1>
+
+   <CreatePage> </CreatePage>
        
 </div>   
 </template>
@@ -12,8 +15,11 @@ import CreatePage from '../components/CreatePage.vue'
 
 
 
+
 export default {
   components: { CreatePage },
+  
+  
  
  
 }
