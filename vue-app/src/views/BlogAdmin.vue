@@ -14,16 +14,8 @@
 <script>
 import ButtonCreate from '../components/ButtonCreate.vue'
 
-
-
-
-
-
 export default {
   components: { ButtonCreate },
-  
-  
- 
  
 }
 </script>

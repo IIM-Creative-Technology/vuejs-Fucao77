@@ -12,6 +12,7 @@
             <input type="text" name="" id="" placeholder="Meta Description">
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <img src="" alt="">
+            <a class="button is-sucess add-button" @click="submitTask"><button>Ajouter l'article </button></a>
         </form>
         </div>
     </div>
@@ -23,6 +24,24 @@
 export default {
     name: 'Page',
     props: ["revele", "toggleModale"],
+
+    //Ajout de l'article
+    data () {
+        return {
+            task: ''
+        }
+    },
+    methods: {
+        submitTask() {
+            if (this.task != '') {
+                this.$emit('newTask', this.task)
+            }
+            this.task = ''
+        }
+    }
+
+
+    
 }
 </script>
 
@@ -49,8 +68,18 @@ export default {
   right: 0;
 }
 
+h2 {
+    color: #fff;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .modale {
-  background: #f1f1f1;
+  background: #1670c4;
   color: #333;
   padding: 50px;
   position: fixed;
