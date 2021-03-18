@@ -4,20 +4,23 @@
 
    <h1>Gestion des article</h1>
 
-   <CreatePage> </CreatePage>
+   <ButtonCreate> </ButtonCreate>
+
+   
        
 </div>   
 </template>
 
 <script>
-import CreatePage from '../components/CreatePage.vue'
+import ButtonCreate from '../components/ButtonCreate.vue'
+
 
 
 
 
 
 export default {
-  components: { CreatePage },
+  components: { ButtonCreate },
   
   
  
