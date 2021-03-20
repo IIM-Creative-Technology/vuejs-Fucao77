@@ -6,15 +6,17 @@
     <div class="modale card">
         <div v-on:click="toggleModale" class="btn-modale btn btn-danger">X</div>
         <h2>Remplir les champs</h2>
-        <form action="">
-            <input type="text" name="Titre" placeholder="Titre">
-            <input type="text" name="Meta Title" id="" placeholder="Meta title">
-            <input type="text" name="" id="" placeholder="Meta Description">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <form>
+            <input type="text" name="Titre" placeholder="Titre" v-model="task">
+            <input type="text" name="Meta_Title" id="" placeholder="Meta title" v-model="titre">
+            <input type="text" name="" id="" placeholder="Meta Description" v-model="contenu">
+            <textarea name="Contenu" id="" cols="30" rows="10" placeholder="Message"></textarea>
             <img src="" alt="">
-            <a class="button is-sucess add-button" @click="submitTask"><button>Ajouter l'article </button></a>
+            <button @click="submitTask"> ajouter l'article l'article </button>
         </form>
         </div>
+    
     </div>
    
 </template>
@@ -28,15 +30,19 @@ export default {
     //Ajout de l'article
     data () {
         return {
-            task: ''
+            task: '',
+            titre: '',
+            description: ''
         }
     },
     methods: {
         submitTask() {
-            if (this.task != '') {
-                this.$emit('newTask', this.task)
+            if (this.task != '', this.titre != '', this.description != '') {
+                this.$emit('newTask', this.task, this.titre, this.contenu)
             }
             this.task = ''
+             this.titre = ''
+              this.description = ''
         }
     }
 

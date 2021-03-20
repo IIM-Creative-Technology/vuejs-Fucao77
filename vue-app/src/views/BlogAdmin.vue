@@ -1,23 +1,43 @@
 <template>
-<div class="content">
+  <div class="block">
+    <h1>Gestion des article</h1>
 
+    <ButtonCreate> </ButtonCreate>
 
-   <h1>Gestion des article</h1>
-
-   <ButtonCreate> </ButtonCreate>
 
    
-       
-</div>   
+
+    <div class="content">
+      <Article> </Article>
+    </div>
+
+  </div>
+
+
 </template>
 
 <script>
-import ButtonCreate from '../components/ButtonCreate.vue'
+import { mapActions, mapState } from "vuex";
+import ButtonCreate from "../components/ButtonCreate.vue";
+import Article from "../components/Article.vue";
 
 export default {
-  components: { ButtonCreate },
- 
-}
+  name: "admin",
+  components: { ButtonCreate, Article },
+
+  methods: {
+    ...mapActions(["addTask"]),
+  },
+
+  computed: {
+    ...mapState(["tasks"]),
+  },
+};
 </script>
 
+<style scoped>
 
+
+
+
+</style>
