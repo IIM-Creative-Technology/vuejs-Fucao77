@@ -8,7 +8,7 @@
    
 
     <div class="content">
-      <Article> </Article>
+      <Article > </Article>
     </div>
 
   </div>
@@ -26,7 +26,7 @@ export default {
   components: { ButtonCreate, Article },
 
   methods: {
-    ...mapActions(["addTask"]),
+    ...mapActions(['addTask', 'removeTask']),
   },
 
   computed: {

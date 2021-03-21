@@ -7,13 +7,13 @@
         <div v-on:click="toggleModale" class="btn-modale btn btn-danger">X</div>
         <h2>Remplir les champs</h2>
 
-        <form>
-            <input type="text" name="Titre" placeholder="Titre" v-model="task">
-            <input type="text" name="Meta_Title" id="" placeholder="Meta title" v-model="titre">
-            <input type="text" name="" id="" placeholder="Meta Description" v-model="contenu">
-            <textarea name="Contenu" id="" cols="30" rows="10" placeholder="Message"></textarea>
+        <form @submit="postData" method="post">
+            <input type="text" name="titre" placeholder="Titre" v-model="task">
+            <input type="text" name="meta_title" id="subtitle" placeholder="Meta title" v-model="subtitle">
+            <input type="text" name="meta_description" id="" placeholder="Meta Description" v-model="meta_description">
+            <textarea name="Contenu" id="" cols="30" rows="10" placeholder="Message" v-model="contenu"></textarea>
             <img src="" alt="">
-            <button @click="submitTask"> ajouter l'article l'article </button>
+            <button type="submit"> ajouter l'article l'article </button>
         </form>
         </div>
     
@@ -29,26 +29,39 @@ export default {
 
     //Ajout de l'article
     data () {
-        return {
-            task: '',
-            titre: '',
-            description: ''
-        }
+       return {
+               task: '',
+               titre: '',
+               meta_description: '',
+               contenu: '',
+       }
     },
     methods: {
-        submitTask() {
-            if (this.task != '', this.titre != '', this.description != '') {
-                this.$emit('newTask', this.task, this.titre, this.contenu)
-            }
-            this.task = ''
-             this.titre = ''
-              this.description = ''
+      submitTask() {
+        if (this.task != '') {
+          this.$emit('newTask', this.task)
         }
+        this.task = ''
+
+        if (this.titre != '') {
+          this.$emit('newTask', this.titre)
+        }
+        this.titre = ''
+
+           if (this.meta_description != '') {
+          this.$emit('newTask', this.meta_description)
+        }
+        this.meta_description = ''
+
+          if (this.contenu != '') {
+          this.$emit('newTask', this.contenu)
+        }
+        this.contenu = ''
+
+      }
     }
-
-
-    
-}
+        
+    }
 </script>
 
 
