@@ -2,7 +2,7 @@
   <div class="block">
     <h1>Gestion des article</h1>
 
-    <ButtonCreate @newTask="addTask"> </ButtonCreate>
+    <ButtonCreate :tasks="tasks"  @check="checkTask" @remover="removeTask"> </ButtonCreate>
 
 
    
