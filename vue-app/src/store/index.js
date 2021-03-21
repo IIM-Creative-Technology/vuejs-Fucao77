@@ -104,17 +104,17 @@ export default new Vuex.Store({
       state.meta_description.splice(index, 1)
     },
 
-    /*Ajout du contenu*/
-    ADD_CONTENU(state, contenu) {
+    /*Ajout du contenu contenu*/
+    /*ADD_CONTENU(state, contenu) {
       let contenu = { 'description': contenu, 'checked': false }
-      state.meta_description.push(new_contenu);
+      state.contenu.push(new_contenu);
     },
     CHECK_CONTENU(state, index) {
       state.contenu[index]['checked'] = !state.contenu[index]['checked']
     },
     REMOVE_CONTENU(state, index) {
       state.contenu.splice(index, 1)
-    },
+    },*/
 
 
   },

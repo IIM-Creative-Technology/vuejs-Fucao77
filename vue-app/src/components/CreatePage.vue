@@ -7,13 +7,13 @@
         <div v-on:click="toggleModale" class="btn-modale btn btn-danger">X</div>
         <h2>Remplir les champs</h2>
 
-        <form @submit="postData" method="post">
+        <form method="post">
             <input type="text" name="titre" placeholder="Titre" v-model="task">
             <input type="text" name="meta_title" id="subtitle" placeholder="Meta title" v-model="subtitle">
             <input type="text" name="meta_description" id="" placeholder="Meta Description" v-model="meta_description">
-            <textarea name="Contenu" id="" cols="30" rows="10" placeholder="Message" v-model="contenu"></textarea>
+           <!-- <textarea name="contenu" id="" cols="30" rows="10" placeholder="Message" v-model="message"></textarea>-->
             <img src="" alt="">
-            <button type="submit"> ajouter l'article l'article </button>
+            <button type="submit" @click="submitTask"> ajouter l'article </button>
         </form>
         </div>
     
@@ -32,8 +32,8 @@ export default {
        return {
                task: '',
                titre: '',
-               meta_description: '',
-               contenu: '',
+               meta_description: ''
+               //contenu: ''
        }
     },
     methods: {
@@ -53,10 +53,10 @@ export default {
         }
         this.meta_description = ''
 
-          if (this.contenu != '') {
+        /*if (this.contenu != '') {
           this.$emit('newTask', this.contenu)
         }
-        this.contenu = ''
+        this.contenu = ''*/
 
       }
     }
