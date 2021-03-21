@@ -2,13 +2,13 @@
   <div class="block">
     <h1>Gestion des article</h1>
 
-    <ButtonCreate> </ButtonCreate>
+    <ButtonCreate @newTask="addTask"> </ButtonCreate>
 
 
    
 
     <div class="content">
-      <Article > </Article>
+      <Article :tasks="tasks"  @check="checkTask" @remover="removeTask"> </Article>
     </div>
 
   </div>

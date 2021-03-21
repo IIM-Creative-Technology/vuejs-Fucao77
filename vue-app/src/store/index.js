@@ -68,7 +68,7 @@ export default new Vuex.Store({
     tasks: [],
     titres: [],
     meta_description: [],
-    contenu: [],
+    //contenu: [],
   },
   mutations: {
     ADD_TASK(state, task) {

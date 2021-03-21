@@ -19,9 +19,20 @@ import CreatePage from './CreatePage.vue'
 
 export default {
   components: { CreatePage },
+  props: ['tasks'],
+  data () {
+      return {
 
-  
+    }
+  },
  
-    
+  methods: {
+     check(index) {
+        this.$emit('check', index)
+      },
+      remover(index) {
+        this.$emit('remover', index)
+      }
+  }    
 }
 </script>
